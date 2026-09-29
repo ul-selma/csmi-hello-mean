@@ -14,7 +14,7 @@ int main(int argc, char** argv) {
     MPI_Init(&argc, &argv);
     int rank;
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-    const std::vector<double> temperatures{18.0, 20.0, 22.0};
+    const std::vector<double> temperatures{18.0, 20.0, 22.0, 26.0};
     std::cout << "[out] rank=" << rank << " mean=" << mean(temperatures) << '\n';
     std::cerr << "[err] rank=" << rank << " mean=" << mean(temperatures) << '\n';
     MPI_Finalize();
